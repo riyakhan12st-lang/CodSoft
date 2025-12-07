@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title> Riya-Portfolio</title>
+    
+    <!----Icons font-awesome------->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <!-------CSS Work -------->
+    
+    <style>
+    
+      /* For Basic setup */
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+       /* COLOR THEME */
+      :root {
+       --bg: #0d0f1a;
+       --card: rgba(22, 26, 43, 0.4);
+        --text: #e6e9ff;
+        --accent: #4cc9ff;
+        --accent-hover: #72e6ff;
+       --border: #23304e;
+}
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, sans-serif;
+}
+
+    /*  Header  */
+    
+    header{
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f1220;
+      border-bottom: 2px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    
+    nav a{
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text);
+      transition: 0.3s;
+    }
+    
+    nav a:hover{
+      color: var(--accent);
+    }
+    
+    /*     Hover      */
+    .hero{
+      display: flex;
+      justify-content: space-between;
+      padding: 8% 8% ;
+      align-items: center;
+      gap: 40px;
+    }
+  
+  .hero-text{
+    max-width: 50%;
+  }
+  
+  .hero-img img{
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 20px var(--accent);
+    
+  }
+  
+  .accent{
+    color: var(--accent);
+  }
+  
+  .btn, .btn-outline{
+    display: inline-block;
+    padding: 12px 22px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .btn {
+    background: var(--accent);
+    color: #000;
+}
+
+.btn:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 0 15px var(--accent);
+}
+
+.btn-outline {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+    font-size: 26px;
+    margin-right: 18px;
+    color: var(--accent);
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: var(--accent-hover);
+    text-shadow: 0 0 12px var(--accent);
+}
+
+/* GLASS EFFECT */
+.glass {
+    background: var(--card);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/*    Skills     */
+.skills{
+  padding: 60px 8%;
+}
+
+.section-title{
+  text-align: center;
+  font-size: 30px;
+  color: var(--accent);
+}
+
+.skills-container{
+  display: grid;
+  margin-top: 30px;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.skill-card h3{
+  margin-bottom: 15px;
+}
+
+.skill-bar{
+  width: 100%;
+  height: 10px;
+  background: #1a2033;
+  border-radius: 5px;
+}
+
+.skill-level{
+  height: 10px;
+  background: var(--accent);
+  border-radius: 5px;
+  animation: grow 1.8s ease;
+}
+
+@keyframes grow{
+  from {width: 0;}
+  to { width: 100%;}
+}
+
+/*   Projects Section    */
+
+.projects{
+  padding: 60px 8%;
+  
+}
+
+.projects-grid{
+  margin-top: 30px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card{
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.project-card:hover{
+  border-color: var(--accent);
+  box-shadow: 0 0 18px var(--accent);
+}
+
+/*     Contact Section      */
+
+.contact{
+  padding: 60px 8%;
+}
+
+.contact-form{
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--text);
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+}
+
+textarea{
+  height: 130px;
+}
+
+/*     Footer Section     */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--accent);
+}
+    </style>
+  </head>
+  <body>
+    
+    <!-------Navbar---------->
+    <header>
+      <h2 class="logo">Riya Khan</h2>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    
+    <!----hero------>
+    <section id="home" class="hero">
+     <div class="hero-text">
+      <h1>Hello, I'm <span class="accent">Riya</span></h1>
+      <h3>Aspiring Full Stack Developer</h3>
+         <p>I create modern, responsive & beautiful web experiences.</p>
+      
+      <div class="hero-buttons">
+        <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
+        <a href="#projects" class="btn-outline" target="_blank">My Work</a>
+      </div>
+      
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-snapchat"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-google"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+         
+     </div> 
+     
+     <div class="hero-img">
+       <img src="me.png" alt="me"/>
+     </div>
+    </section>
+    
+    <!------Skills------->
+    
+    <section class="skills" id="skills">
+      <h2 class="section-title">My Skills</h2>
+      
+      <div class="skills-container">
+        <div class="skill-card glass">
+          <h3>HTML</h3>
+          <div class="skill-bar">
+            <div class="skill-level" style="width:95%;">
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-card glass">
+          <h3>CSS</h3>
+            <div class="skill-bar">
+              <div class="skill-level" style="width:80%;">
+              </div>
+            </div>
+        </div>
+        
+        <div class="skill-card glass">
+          <h3>JavaScript</h3>
+            <div class="skill-bar">
+              <div class="skill-level" style="width:70%;">
+                
+              </div>
+            </div>
+        </div>
+        
+        <div class="skill-card glass">
+          <h3>Python</h3>
+            <div class="skill-bar">
+              <div class="skill-level" style="width:70%;">
+                
+              </div>
+            </div>
+        </div>
+        
+        <div class="skill-card glass">
+          <h3>Github</h3>
+          <div class="skill-bar">
+            <div class="skill-level"style="width:80%;">
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-------Project-------->
+    <section id="projects" class="projects">
+      <h2 class="section-title">Projects
+      </h2>
+      
+      <div class="projects-grid">
+        <a href="Calculator L1 Task3.html" class="project-card glass" target="_blank">
+          <h3>Calculator App</h3>
+          <p>
+            A responsive Calculator using HTML ,CSS, JavaScript
+          </p>
+        </a>
+        
+        <a href="Landing page Task2.html" class="project-card glass" target="_blank">
+          <h3>Landing Page</h3>
+          <p>
+            Elegant Modern Landing Page Design
+          </p>
+        </a>
+        
+        <a href="Task1.html" class="project-card glass" target="_blank">
+          <h3>
+            Portfolio Website
+          </h3>
+          <p>
+            Neon Blue Dark Theme Website
+          </p>
+        </a>
+        
+      </div>
+    </section>
+    
+    <!------Contact section------->
+    
+    <section class="contact" id="contact">
+      <h2 class="section-title"> Contact Me </h2>
+      <form class="contact-form glass">
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your Email" required>
+        <textarea placeholder="Enter Your Message" requiired></textarea>
+        <button class="btn">Send Message</button>
+      </form>
+    </section>
+    
+    <!----- Footer Section------>
+  
+  <footer>
+     <p>@ 2025 Riya Khan.  All Rights Reserved.</p>
+  </footer>
+   
+    
+  </body>
+</html>
