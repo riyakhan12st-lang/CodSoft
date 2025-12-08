@@ -1,0 +1,258 @@
+<!doctype>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+    /* Body */
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Sans-Serif ;
+      }
+      body{
+        background: #f7f7f7;
+      }
+      /* Header*/
+      header{
+        width: 100%;
+        background: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #eee;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+     /* Logo */
+     .logo{
+       font-size: 25px;
+       font-weight: bold;
+       color: #333;
+     }
+             /* Navigation */
+      nav ul{
+        list-style: none;
+        display: flex;
+        gap: 25px;
+      }
+      nav ul li a{
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+      nav ul li a:hover{
+        color: #ffca28;
+      }
+       /* Responsive */
+      @media(max-width:700px){
+        nav ul{
+          flex-direction: column;
+          background: white;
+          position: absolute;
+          right: 30px;
+          top: 65px;
+          padding: 15px 20px;
+          border-radius: 10px;
+          display: none;
+        }
+      }
+      
+      /*      Hero section       */
+      .hero{
+        height: 90vh;
+        background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center ;
+        padding: 20px;
+      }
+      
+      .hero-content{
+        color: white;
+        padding: 32px;
+        border-radius:15px;
+        background: rgba(0,0,0,0.5);
+        
+      }
+      .hero-content h1{
+        font-size: 35px;
+        font-weight: bold;
+      }
+      .hero-content p{
+        margin-top: 10px;
+        font-size: 18px;
+      }
+      .cta-button{
+        margin-top: 20px;
+        padding: 10px 25px;
+        font-size: 18px;
+        color: black;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        background: #ffca28;
+      }
+      .cta-button:hover{
+        background: #ffb300;
+      }
+      
+       /* About Section */
+      .about, .contact{
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+      .about h2, .contact h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+       .about p, .contact p{
+            width: 85%;
+            margin: auto;
+            font-size: 18px;
+            color: #555;
+        }
+        
+      /*   Cards Section      */
+      
+      .container{
+        padding: 50px 20px;
+    
+      }
+      
+      .title{
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 30px;
+        font-weight: bold;
+        
+      }
+      
+      .cards{
+        display: grid;
+        grid-template-rows: repeat(auto-fit,minmax(250px, 1fr));
+        gap: 25px;
+      }
+      
+      .card{
+        background: white;
+        padding: 30px 20px;
+        text-align: center;
+        border-radius: 29px;
+        border: 2px solid transparent;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      
+      .card:hover{
+        transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+            border-color: #ffca28;
+      }
+      
+      .icon{
+          font-size: 50px;
+          margin-bottom: 15px;
+        }
+        
+        /* Footer section--------*/
+        
+       .footer{
+            margin-top: 50px;
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+      
+    </style>
+  </head>
+  <body>
+    <!-----header Sectuon---------->
+    <header>
+      <div class="logo">Riya Classes</div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+    
+    <!------hero section+----->
+    <div class="hero" id="home">
+      <div class="hero-content">
+        <h1>Riya Classes</h1>
+        <p>
+        Providing Quality Education for class 1st to 10th
+        </p>
+        <button class="cta-button">Join Now</button>
+      </div>
+    </div>
+    
+    <section class="about" id="about">
+      <h2>About Riya Classes</h2>
+        <p>
+            Riya Classes provides strong foundational learning for students of Class 1 to 10. 
+            We focus on understanding, concept clarity, doubt-solving, and regular tests to ensure better results.
+        </p>
+    </section>
+    
+    <!-------services section-------->
+    <div class="container" id="courses"> 
+      <h2 class="title">What We Offer</h2>
+      <div class="cards">
+        
+      <div class="card">
+                <div class="icon">📘</div>
+                <h3>Class 1–5 Coaching</h3>
+                <p>Basics, fundamentals, homework support & concept building.</p>
+            </div>
+        
+        <div class="card">
+              <div class="icon">📚</div>
+                <h3>Class 6–8 Coaching</h3>
+                <p>Strong foundation in Maths, Science & all subjects.</p>
+         </div>
+
+          <div class="card">
+               <div class="icon">🧪</div>
+                <h3>Class 9–10 Coaching</h3>
+                <p>Board exam preparation with notes, tests & doubt clearing.</p>
+          </div>
+
+          <div class="card">
+              <div class="icon">✏️</div>
+                <h3>Weekly Tests</h3>
+                <p>Regular assessments to track student progress.</p>
+          </div>
+        
+      </div>
+    </div>
+    
+        <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: riyaclasses@gmail.com</p>
+        <p>Phone: 98765 43210</p>
+        <p>Location: Raebareli, Uttar Pradesh</p>
+    </section>
+    
+    <!------Footer-------->
+    <div class="footer">
+      @2025 Riya's Classes | All Rights Reserved
+    </div>
+  </body>
+  </html>
